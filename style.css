@@ -1,0 +1,88 @@
+/* our comment goes in her*/
+
+/* generic selector */
+
+body {
+	background-color: #FF3434;
+	color: white; /* text color */
+	font-family: Garamond, monospace;
+}
+
+ul {
+margin: 0;
+padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	color: white;
+	transition: color 200ms ease-in;
+}
+
+/* psuedo selector - user interacts */
+a:hover {
+	color: #FFFF00;
+}
+
+img { 
+	width: 100%; 
+}
+/* id and class selector */
+#container {
+	min-width: 320px;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+#header {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+/* nested selector */
+#header ul {
+	display: flex;	
+}
+
+#header li {
+	margin-left: 1em;
+}
+
+#header a {
+	font-size: 1.5em;
+}
+
+#portfolio {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 1em;
+}
+
+.project {
+	border: 2px solid white;
+	padding: 1em;
+	background-color: transparent;
+	transition: background-color 200ms ease-in;
+}
+
+.project:hover {
+	background-color: #000AA6;
+}
+
+.project a {
+	font-size: 1.25em;
+}
+
+/* about */
+#portrait {
+	width: 200px;
+	float: right;
+}
+
+#about p {
+	font-size: 2em;
+}
