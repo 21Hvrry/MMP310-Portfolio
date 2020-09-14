@@ -47,9 +47,9 @@ function draw() {
 	}
 
 	if (haroldIsWalking) {
-		image(haroldIdle, haroldX, haroldY);
+		image(haroldWalk, haroldX, haroldY);
 	} else {
-		image(haroldIdle, haroldX, haroldY);
+		image(haroldWalk, haroldX, haroldY);
 	}
 
 }
