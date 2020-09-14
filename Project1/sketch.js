@@ -14,14 +14,14 @@ function preload() {
 }
 
 function setup () {
-	createCanvas (83, 228, 19);
+	createCanvas (750, 600);
 	haroldX = width/2;
 	haroldY = height/2;
 	imageMode(CENTER);
 }
 
 function draw() {
-	background(220);
+	background(83, 228, 19);
 
 	var haroldIsWalking = false
 

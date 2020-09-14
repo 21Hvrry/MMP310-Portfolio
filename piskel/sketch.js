@@ -5,10 +5,10 @@ function preload(){
 }
 
 function setup () {
-	createCanvas(83, 228, 19);
+	createCanvas(750, 600);
 }
 
 function draw () {
-	background(220);
+	background(83, 228, 19);
 	image(haroldIdle,0,0);
 }
