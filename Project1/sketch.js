@@ -10,7 +10,7 @@ var haroldSpeed = 3
 
 function preload() {
 	haroldIdle = loadImage ("Harold_idle.gif");
-	haroldWalk - loadImage ("Harold_walk.gif");
+	haroldWalk = loadImage ("Harold_walk.gif");
 }
 
 function setup () {
