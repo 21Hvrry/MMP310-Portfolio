@@ -49,7 +49,7 @@ function draw() {
 	if (haroldIsWalking) {
 		image(haroldWalk, haroldX, haroldY);
 	} else {
-		image(haroldWalk, haroldX, haroldY);
+		image(haroldIdle, haroldX, haroldY);
 	}
 
 }
