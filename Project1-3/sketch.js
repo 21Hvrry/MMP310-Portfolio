@@ -13,6 +13,16 @@ var treeImage, cloudImage;
 var bgTreeX = [57, 206, 360, 528, 695, 867, 1054];
 var bgTreeY = [400, 350, 350, 350, 323, 366, 366];
 
+var bgCloudX = [57, 242, 475, 750, 10252];
+var bgCLoudY = [79, 148, 25, 150, 126];
+var cloudPositions = [
+	[57,79],
+	[242,148],
+	[475,25],
+	[750,150],
+	[1025,126]
+];
+
 function preload() {
 	haroldIdle = loadImage("Harold_idle.gif");
 	haroldWalk = loadImage("Harold_walk.gif");
@@ -32,13 +42,20 @@ function draw() {
 	//console.log (mouseX, mouseY);
 
 	//loop
-	for (var cloudCounter = 0; cloudCounter < 6; cloudCounter += 1) {
-		image(cloudImage, cloudCounter * 250,50);
-
-	}
 	
 	for (let i = 0; i < bgTreeX.length; i++){
 		image(treeImage, bgTreeX[i], bgTreeY[i]);
+	}
+
+	for (let i = 0; i < cloudPositions.length; i++) { 
+		image(cloudImage, cloudPositions[i][0], cloudPositions[i][1]);
+
+		cloudPositions[i][0] += 2; //increase x
+		if (cloudPositions[i][0] > width + cloudImage.width) {
+			cloudPositions[i][0] = -cloudImage.width;
+		}
+
+		cloudPositions[i][1] += random(-1, 1); //random y
 	}
 
 
