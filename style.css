@@ -6,6 +6,8 @@ body {
 	background-color: #FF3434;
 	color: white; /* text color */
 	font-family: Garamond, monospace;
+	margin: 0;
+	overflow: hidden;
 }
 
 ul {
