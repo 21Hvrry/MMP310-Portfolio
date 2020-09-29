@@ -42,16 +42,25 @@ function setup () {
 function sign(msg, x, y){
 	image(signImage, x, y);
 
+	//2d colliso=ion between player and sign
+	if (haroldX - haroldIdle.width / 2 < x + signImage.width / 2 && 
+		haroldX + haroldIdle.width / 2 > x - signImage.width / 2 &&
+		haroldY - haroldIdle.height / 2 < y + signImage.height / 2 &&
+		haroldY + haroldIdle.height / 2 > y - signImage.height / 2
+		){	
 	fill(0);
 	textFont("Yanone Kaffeesatz");
 	textSize(16);
 	textAlign(CENTER);
 	text(msg, x, y);
+
+	}
+
 }
 
 function draw() {
 	background(196, 196, 196);
-	console.log (mouseX, mouseY);
+	//console.log (mouseX, mouseY);
 
 	//loop
 	
@@ -96,8 +105,8 @@ function draw() {
 	}
 
 	/*sign*/
-	sign("Start Here!", 120, 510);
-	sign("Save!", 569, 406);
+	sign("Save!", 120, 510);
+	sign("Start Here!", 569, 406);
 	sign("Hint!", 1209, 507);
 
 
