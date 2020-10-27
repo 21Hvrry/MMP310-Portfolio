@@ -41,7 +41,7 @@ var maxDefenders = 6;
 function preload() {
 	haroldIdle = loadImage("Harold_idle.gif");
 	haroldWalk = loadImage("Harold_walk.gif");
-	haroldJump = loadImage("Harold_jump.gif");
+	haroldJump = loadImage("Harold_Jump.gif");
 
 	defenderImage = loadImage("Defender.png");
 	treeImage = loadImage("tree.png");
