@@ -24,6 +24,10 @@ button:active{
 	border-color: white;
 }
 
+button.disable{
+	display: none;
+}
+
 h1 {
 	color: white;
 }
@@ -49,12 +53,6 @@ button#start {
 	margin-right: 1em;
 }
 
-.answers {
-	display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .option {
 	font-size: 2em;
 
@@ -63,7 +61,7 @@ button#start {
     background: #0B006C;
     color: white;
     
-    flex-basis: 350px;
+    flex-basis: 150px;
     height: 100px;
     
     display: flex;
@@ -77,4 +75,12 @@ button#start {
 
 .option:hover {
 	background-color: #008074;
+}
+
+.option.correct-answer {
+	border-color: green;
+}
+
+.option.wrong-answer {
+	border-color: red;
 }

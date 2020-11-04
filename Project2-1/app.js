@@ -15,7 +15,7 @@ function loadNextQuestion() {
 	const questionContainer = createElement('div', 'question-container');
 	quizContainer.appendChild(questionContainer);
 
-	const question = createElement('h2', 'question',  "Who's the current UCL Winner?");
+	const question = createElement('h2', 'question', "Who's the current UCL Winner?");
 	questionContainer.appendChild(question);
 
 	const answers = createElement('div', 'answers');
