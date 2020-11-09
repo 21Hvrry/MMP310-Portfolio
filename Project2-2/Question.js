@@ -12,17 +12,17 @@ class Question {
 		const answers = createElement('div', 'answers');
 		this.questionContainer.appendChild(answers);
 
-		const answerDiv = createElement('div', 'option', answer);
-		answers.appendChild(answerDiv);
+		//const answerDiv = createElement('div', 'option', answer);
+		//answers.appendChild(answerDiv);
 
 		// user chooses correct optoin
-		answerDiv.addEventListener('click', function() {
-			if (!answerAttempted) {
-				answerDiv.classList.add('correct-answer');
-				answerAttempted = true;
-				questionAnswered(true);
-			}
-		});
+		//answerDiv.addEventListener('click', function() {
+		//	if (!answerAttempted) {
+		//		answerDiv.classList.add('correct-answer');
+		//		answerAttempted = true;
+		//		questionAnswered(true);
+		//	}
+		//});
 
 		for (let i = 0; i < options.length; i++) {
 			let option = createElement('div', 'option', options[i]);
