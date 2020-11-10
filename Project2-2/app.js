@@ -16,7 +16,12 @@ let score = 0;
 
 questions.push(new Question("Who's the current UCL Winner?", "Bayern Munich", ["Real Madrid", "Liverpool"]));
 questions.push(new Question("Who's the all-time top goalscorer in the UCL?", "Cristiano Ronaldo", ["Lionel Messi", "Robert Lewandowski"]));
-questions.push(new Question("Which team has the longest winning streak in the UCL? ", ["Bayern Munich", "Barcelona", "Real Madrid"]));
+questions.push(new Question("Which team has the longest winning streak in the UCL? ", "Bayern Munich", ["Barcelona", "Real Madrid"]));
+questions.push(new Question("Which team has won 13 UCL trophies? ", "Real Madrid", ["AC Milan", "Ajax"]));
+questions.push(new Question("How many teams were able to win the UCL in three consecutive years? ", "3", ["9", "1", "0"]));
+questions.push(new Question("Which of these teams haven't won a UCL trophy? ", "Tottenham Hotspur", ["Borussia Dortmund", "Nottingham Forest"]));
+questions.push(new Question("Which player has the most appearances in the UCL competition? ", "Iker Casillas", ["Ronaldo (Brazilian)", "Xavi"]));
+
 
 console.log(questions);
 
