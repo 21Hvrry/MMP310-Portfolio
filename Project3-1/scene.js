@@ -10,69 +10,35 @@ document.body.appendChild( renderer.domElement );
 const controls = new THREE.OrbitControls( camera, renderer.domElement );
 
 /* scene */
-const sceneWidth = 20;
+const sceneWidth = 30;
 
-// street
-const streetGeo = new THREE.PlaneGeometry( sceneWidth, 8 );
-const streetMat = new THREE.MeshBasicMaterial( { color: 0x000000, side: THREE.DoubleSide } );
-const street = new THREE.Mesh( streetGeo, streetMat );
-street.rotation.x = Math.PI * -0.5;
-scene.add( street );
+// cafeteria
+const cafeteriaGeo = new THREE.PlaneGeometry( 30 , 20 );
+const cafeteriaMat = new THREE.MeshBasicMaterial( { color: 0xA8A8A8, side: THREE.DoubleSide } );
+const cafeteria = new THREE.Mesh( cafeteriaGeo, cafeteriaMat );
+cafeteria.rotation.x = Math.PI * -0.5;
+scene.add( cafeteria );
 
-// sidewalk 
-for (let x = -sceneWidth / 2; x < sceneWidth / 2; x += 1) {
-	const geo = new THREE.BoxGeometry( 0.95, 0.1, 0.95 );
-	const mat = new THREE.MeshBasicMaterial( { color: 0x828282 } );
-	const sidewalk1 = new THREE.Mesh( geo, mat );
-	sidewalk1.position.set( x + 0.5, 0.05, -2.4 );
-	scene.add( sidewalk1 );
+// wall1 
+const wall1Geo = new THREE.BoxGeometry( 30, 15, 1 );
+const wall1Mat = new THREE.MeshBasicMaterial( {color: 0x515151, side: THREE.DoubleSide} );
+const wall1 = new THREE.Mesh( wall1Geo, wall1Mat );
+wall1.position.set( 0 , 7.5, -10 );
+scene.add( wall1 );
 
-	const sidewalk2 = new THREE.Mesh( geo, mat );
-	sidewalk2.position.set( x + 0.5, 0.05, -3.42 );
-	scene.add( sidewalk2 );
-}
+//wall2
+const wall2Geo = new THREE.BoxGeometry( 1, 15, 20 );
+const wall2Mat = new THREE.MeshBasicMaterial( {color: 0x515151, side: THREE.DoubleSide} );
+const wall2 = new THREE.Mesh( wall2Geo, wall2Mat );
+wall2.position.set( -15 , 7.5, 0 );
+scene.add( wall2 );
 
-// buildings
-for (let x = -sceneWidth / 2; x < sceneWidth / 2; x += 4) {
-	const w = 3.5;
-	const h = random( 4, 8 );
-	const geo = new THREE.BoxGeometry( w, h, 5 );
-	const mat = new THREE.MeshBasicMaterial( { color: 0xE8D37C } );
-	const building = new THREE.Mesh( geo, mat );
-	building.position.set( x + w / 2, h / 2, -6.5 );
-	scene.add( building );
-}
-
-// trees 
-const numTrees = random( 4, 8 );
-for (let i = 0; i < numTrees; i++) {
-	const tree = new THREE.Group();
-	const h = random(2, 4);
-	
-	const geo = new THREE.CylinderGeometry( 0.125, 0.25, h, 5 );
-	const mat = new THREE.MeshBasicMaterial( { color: 0xA19281 } );
-	const trunk = new THREE.Mesh( geo, mat );
-	tree.add( trunk );
-
-	const numLeaves = random( 1, 5 );
-	for (let j = 0; j < numLeaves; j++) {
-		const leafGeo = new THREE.IcosahedronGeometry( random( 0.25 ) );
-		const leafMat = new THREE.MeshBasicMaterial( { color: 0x8AE8A7 } );
-		const leaf = new THREE.Mesh( leafGeo, leafMat );
-		let x = random( -0.5, 0.5 );
-		let y = h / 2 + random( -0.5, 0.25 );
-		let z = random( -0.5, 0.5 );
-		leaf.position.set( x, y, z );
-		leaf.rotation.x = random( 0, Math.PI * 0.5 );
-		leaf.rotation.y = random( 0, Math.PI * 0.5 );
-		tree.add( leaf );
-	}
-
-	let x = random(-sceneWidth / 2, sceneWidth / 2);
-	let z = random( -2, -3 );
-	tree.position.set( x, h / 2, z );
-	scene.add( tree );
-}
+// ship wings 1
+const wing1Geo = new THREE.BoxGeometry( 1, 15, 20 );
+const wing1Mat = new THREE.MeshBasicMaterial( {color: 0x5D5D5D, side: THREE.DoubleSide} );
+const wing1 = new THREE.Mesh( wing1Geo , wing1Mat );
+wing1.position.set( 15, 7.5, 0 );
+scene.add( wing1 );
 
 // random range function
 // https://stackoverflow.com/questions/1527803/generating-random-whole-numbers-in-javascript-in-a-specific-range
@@ -82,14 +48,38 @@ function random( min, max ) {
 
 /* load editor scene */
 const loader = new THREE.ObjectLoader();
-loader.load( 'scene.json', onLoad);
+loader.load( 'scene_2.json', onLoad);
 
-function onLoad( bench ) {
+function onLoad( table ) {
 
-	bench.scale.set( 0.5, 0.5, 0.5 );
-	bench.position.set( 0, 0.5, -3.3 );
+	table.scale.set( 2, 2, 2 );
+	table.position.set( -2.0, 0.02, 0 );
 
-	scene.add( bench );
+	scene.add( table );
+	animate();
+}
+
+const loader1 = new THREE.ObjectLoader();
+loader1.load( 'scene_3.json', onLoad1);
+
+function onLoad1( amongus ) {
+
+	amongus.scale.set( 1.2, 1.2, 1.2);
+	amongus.position.set( 3.5, 0.02, 0 );
+
+	scene.add( amongus );
+	animate();
+}
+
+const loader2 = new THREE.ObjectLoader();
+loader2.load( 'scene.json', onLoad);
+
+function onLoad( emergency ) {
+
+	emergency.scale.set( 2, 2, 2 );
+	emergency.position.set( 0, 0.02, 0 );
+
+	scene.add( emergency );
 	animate();
 }
 

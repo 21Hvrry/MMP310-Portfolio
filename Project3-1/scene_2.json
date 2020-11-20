@@ -68,28 +68,6 @@
 			"openEnded": false,
 			"thetaStart": 0,
 			"thetaLength": 6.283185
-		},
-		{
-			"uuid": "27F3B063-266A-4CD3-AB3F-D84594703BDC",
-			"type": "BoxBufferGeometry",
-			"width": 1,
-			"height": 1,
-			"depth": 1,
-			"widthSegments": 1,
-			"heightSegments": 1,
-			"depthSegments": 1
-		},
-		{
-			"uuid": "F23388D1-3802-44BE-8877-CCEB6AA64D60",
-			"type": "CylinderBufferGeometry",
-			"radiusTop": 1,
-			"radiusBottom": 1,
-			"height": 1,
-			"radialSegments": 8,
-			"heightSegments": 1,
-			"openEnded": false,
-			"thetaStart": 0,
-			"thetaLength": 6.283185
 		}],
 	"materials": [
 		{
@@ -130,44 +108,6 @@
 			"stencilFail": 7680,
 			"stencilZFail": 7680,
 			"stencilZPass": 7680
-		},
-		{
-			"uuid": "6FD3572E-8DAF-4C34-A0E7-54AA7CD488A0",
-			"type": "MeshStandardMaterial",
-			"color": 16777215,
-			"roughness": 1,
-			"metalness": 0,
-			"emissive": 9408399,
-			"depthFunc": 3,
-			"depthTest": true,
-			"depthWrite": true,
-			"stencilWrite": false,
-			"stencilWriteMask": 255,
-			"stencilFunc": 519,
-			"stencilRef": 0,
-			"stencilFuncMask": 255,
-			"stencilFail": 7680,
-			"stencilZFail": 7680,
-			"stencilZPass": 7680
-		},
-		{
-			"uuid": "0B86928D-A187-463D-9DB0-BBFF9A4F810F",
-			"type": "MeshStandardMaterial",
-			"color": 16777215,
-			"roughness": 1,
-			"metalness": 0,
-			"emissive": 16711680,
-			"depthFunc": 3,
-			"depthTest": true,
-			"depthWrite": true,
-			"stencilWrite": false,
-			"stencilWriteMask": 255,
-			"stencilFunc": 519,
-			"stencilRef": 0,
-			"stencilFuncMask": 255,
-			"stencilFail": 7680,
-			"stencilZFail": 7680,
-			"stencilZPass": 7680
 		}],
 	"object": {
 		"uuid": "31517222-A9A7-4EAF-B5F6-60751C0BABA3",
@@ -193,24 +133,6 @@
 				"matrix": [1,0,0,0,0,0.4,0,0,0,0,1,0,0,0.978166,0,1],
 				"geometry": "7588DFCA-687F-4E4F-8197-36258EF3FBAD",
 				"material": "0CF2AA8E-6FB0-4114-A417-3228D395D2D6"
-			},
-			{
-				"uuid": "FF3EF58A-21DB-47BA-96E6-1F5B24453373",
-				"type": "Mesh",
-				"name": "Box",
-				"layers": 1,
-				"matrix": [0.5,0,0,0,0,0.167856,0,0,0,0,0.5,0,0.006458,1.191092,-0.038459,1],
-				"geometry": "27F3B063-266A-4CD3-AB3F-D84594703BDC",
-				"material": "6FD3572E-8DAF-4C34-A0E7-54AA7CD488A0"
-			},
-			{
-				"uuid": "FA98638D-BEEF-485D-91F1-D5580B2C6200",
-				"type": "Mesh",
-				"name": "Cylinder",
-				"layers": 1,
-				"matrix": [0.15,0,0,0,0,0.128976,0,0,0,0,0.15,0,0.000942,1.327587,-0.028414,1],
-				"geometry": "F23388D1-3802-44BE-8877-CCEB6AA64D60",
-				"material": "0B86928D-A187-463D-9DB0-BBFF9A4F810F"
 			}],
 		"background": 9079434
 	}
